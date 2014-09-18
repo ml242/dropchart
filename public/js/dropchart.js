@@ -149,8 +149,11 @@ var dropchart = function() {
       if (file_type === "json") {
         try { 
           inData = JSON.parse(evt.target.result);
+          console.log(inData);
         } catch(e) { 
-          obj = {filename: file.name, status: "syntax error", message: e, options:{title:file.name} };
+          var errorStack = e.stack
+          obj = {filename: file.name, status: "syntax error", message: e, details: errorStack, options:{title:file.name} };
+          debugger;
         }
         
         if (obj.hasOwnProperty('status') === false) {
