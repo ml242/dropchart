@@ -176,6 +176,8 @@ var dropchart = function() {
       $('#imgDiv').css('margin-left', '-5px')
       $('#modalImg').modal();
       $('.modal-body').width(modalWidth)
+      // starting with redis here?
+      console.log("hello, I'm generating the PNG here");
     });
 
     //  Set up modal to display/edit JSON request
